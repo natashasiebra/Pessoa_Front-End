@@ -12,16 +12,16 @@ export default function Cadastro() {
     const cadastrar = (e) => {
         e.preventDefault()
         
-        const pessoa = {
+        const produto = {
             nome: nome,
             idade: idade,
             uf: uf
         }
-        const pessoaJson = JSON.stringify(pessoa);
-        fetch("http://localhost:3003/pessoa", {
+        const produtoJson = JSON.stringify(produto);
+        fetch("http://localhost:3000/produtos", {
             method: "POST",
             headers: { "content-Type": "application/json" },
-            body: pessoaJson
+            body: produtoJson
         }).then(function(){ route.push("/")}).catch(()=> console.log("Não foi possível cadastrar!"))
     }
 
