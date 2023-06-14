@@ -33,8 +33,8 @@ export default async function Produtos({ params }) {
     return (
         <div>
             <p>{produto.nome}</p>
-            <p>{produto.idade}</p>
-            <p>{produto.uf}</p>
+            <p>{produto.jogo}</p>
+            <p>{produto.data}</p>
             <button onClick={e => e.preventDefault(remover())}>REMOVER</button>
 
         </div>
