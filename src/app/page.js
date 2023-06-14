@@ -14,8 +14,9 @@ export default async function Home() {
       {produtos.map(produtos => (
         <div key={produtos.id}>
           <p>{produtos.nome}</p>
-          <p>{produtos.idade}</p>
-          <Link href={`/produto/${produtos.id}`}>ver mais</Link>
+          <p>{produtos.jogo}</p>
+          <p>{produtos.data}</p>
+          <Link href={`/produto/${produtos.id}`}>Jogos</Link>
         </div>
       ))}
     </main>
