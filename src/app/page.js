@@ -17,6 +17,7 @@ export default async function Home() {
           <p>{produtos.jogo}</p>
           <p>{produtos.data}</p>
           <Link href={`/produto/${produtos.id}`}>Jogos</Link>
+          
         </div>
       ))}
     </main>
