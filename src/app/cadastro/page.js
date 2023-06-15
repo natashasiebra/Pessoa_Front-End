@@ -2,23 +2,29 @@
 import { useState } from 'react'
 import styles from '../page.module.css'
 import { useRouter } from 'next/navigation'
+import '../globals.css'
 
 export default function Cadastro() {
     const route = useRouter();
-    const [nome, setNome] = useState();
-    const [jogo, setJogo] = useState();
-    const [data, setData] = useState();
+    const [titulo, setTitulo] = useState();
+    const [data_cadastro, setData_cadastro] = useState();
+    const [preco, setPreco] = useState();
+    const [descricao, setDescricao] = useState();
+    const [imagem, setImagem] = useState();
 
     const cadastrar = (e) => {
         e.preventDefault()
         
         const produto = {
-            nome: nome,
-            jogo: jogo,
-            data: data
+            titulo: titulo,
+            data_cadastro: data_cadastro,
+            preco: preco,
+            descricao: descricao,
+            imagem: imagem
         }
+        
         const produtoJson = JSON.stringify(produto);
-        fetch("http://localhost:3003/produtos", {
+        fetch("http://localhost:3000/produtos", {
             method: "POST",
             headers: { "content-Type": "application/json" },
             body: produtoJson
@@ -28,25 +34,37 @@ export default function Cadastro() {
     return (
         <div className={styles.main}>
             <form  onSubmit={cadastrar}>
-                <input
+                <input className='input'
                     type="text"
-                    placeholder='Digite seu Nome:'
-                    nome="Nome"
-                    onChange={e => setNome(e.target.value)}
+                    placeholder='Digite O Titulo:'
+                    nome="Tituo"
+                    onChange={e => setTitulo(e.target.value)}
                 /><br/>
-                <input
+                <input className='input'
                     type="text"
-                    placeholder='Nome do Jogo:'
-                    nome="Jogo"
-                    onChange={e => setJogo(e.target.value)}
+                    placeholder='Data De Cadastro:'
+                    nome="Data Cadastro"
+                    onChange={e => setData_cadastro(e.target.value)}
                 /><br/>
-                <input
+                <input className='input'
                     type="text"
-                    placeholder='Data de publicação:'
-                    nome="Data"
-                    onChange={e => setData(e.target.value)}
+                    placeholder='Digite O Preço:'
+                    nome="Preço"
+                    onChange={e => setPreco(e.target.value)}
                 /><br/>
-                <button type='submit'>Cadastrar</button>
+                <input className='input'
+                    type="text"
+                    placeholder='Digite A Descrição:'
+                    nome="Descrição"
+                    onChange={e => setDescricao(e.target.value)}
+                /><br/>
+                <input className='input'
+                    type="text"
+                    placeholder='Link Da Imagem:'
+                    nome="Imagem"
+                    onChange={e => setImagem(e.target.value)}
+                /><br/>
+                <button className='botao' type='submit'>Cadastrar</button>
                 <div>
                     <a href='/'>Voltar</a>
                 </div>

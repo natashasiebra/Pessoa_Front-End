@@ -1,0 +1,38 @@
+.link:link, .link:visited {
+    background-color: white;
+    color: black;
+    border: 2px solid #5202db;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px
+  }
+  
+  .link:hover, .link:active {
+    background-color: #5202db;
+    color: white;
+    border-radius: 12px
+  }
+  .input{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40;
+    color: black;
+   }
+   .voltar:link, .voltar:visited {
+    margin-left: 90%;
+    background-color: white;
+    color: black;
+    border: 2px solid #4003aa;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border-radius: 12px
+  }
+  
+  .voltar:hover, .voltar:active {
+    background-color: #4003aa;
+    color: white;
+    border-radius: 12px
+  }
