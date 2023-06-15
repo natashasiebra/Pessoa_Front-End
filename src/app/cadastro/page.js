@@ -18,7 +18,7 @@ export default function Cadastro() {
             data: data
         }
         const produtoJson = JSON.stringify(produto);
-        fetch("http://localhost:3000/produtos", {
+        fetch("http://localhost:3003/produtos", {
             method: "POST",
             headers: { "content-Type": "application/json" },
             body: produtoJson

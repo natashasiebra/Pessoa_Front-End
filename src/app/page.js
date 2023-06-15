@@ -3,7 +3,7 @@ import Link from 'next/link';
 
 export default async function Home() {
 
-  const req = await fetch("http://localhost:3000/produtos", {
+  const req = await fetch("http://localhost:3003/produtos", {
     cache: "no-cache"
   });
   const produtos = await req.json();
@@ -17,7 +17,7 @@ export default async function Home() {
           <p>{produtos.jogo}</p>
           <p>{produtos.data}</p>
           <Link href={`/produto/${produtos.id}`}>Jogos</Link>
-          
+
         </div>
       ))}
     </main>
