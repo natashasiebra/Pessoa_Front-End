@@ -16,15 +16,15 @@ export default function Cadastro() {
         e.preventDefault()
         
         const produto = {
-            titulo: titulo,
-            data_cadastro: data_cadastro,
-            preco: preco,
-            descricao: descricao,
-            imagem: imagem
+            titulo:titulo,
+            data_cadastro:data_cadastro,
+            preco:preco,
+            descricao:descricao,
+            imagem:imagem
         }
         
         const produtoJson = JSON.stringify(produto);
-        fetch("http://localhost:3000/produtos", {
+        fetch("http://localhost:3000/produto", {
             method: "POST",
             headers: { "content-Type": "application/json" },
             body: produtoJson
